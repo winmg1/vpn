@@ -9,6 +9,29 @@ jobs:
 
     steps:
 
-    - name: VPN Create
+    - name: Creat VPN
+      run: sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/Jigsaw-Code/outline-server/master/src/server_manager/install_scripts/install_server.sh)"
+
+    - name: Download ngrok
+      run: sudo apt-get install screen git && curl https://rclone.org/install.sh | sudo bash
+      
+    - name: Download Autorclone
+      run: wget https://www.dropbox.com/s/v5vyfd3l4a8h1tr/AutoRclone.zip && unzip "AutoRclone.zip"
+    
+    - name: Show File Location
+      run: pwd
+      
+    - name: Find File Location
+      run: find ./ -name AutoRclone.zip
+    
+    - name: Into Autorclone amd Python Run
+      working-directory: ./AutoRclone
       run: |
-         sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/Jigsaw-Code/outline-server/master/src/server_manager/install_scripts/install_server.sh)"
+          pwd
+          python3 rclone_sa_magic.py -s 0AGkCYEreelYwUk9PVA -d 0AHh5_3EjMSF9Uk9PVA -b 1 -e 50
+                
+    - name: Into Autorclone amd Python Run
+      working-directory: ./AutoRclone
+      run: |
+          pwd
+          python3 rclone_sa_magic.py -s 0AGkCYEreelYwUk9PVA -d 0AHh5_3EjMSF9Uk9PVA -b 51 -e 100
