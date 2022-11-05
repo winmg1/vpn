@@ -16,4 +16,4 @@ jobs:
     - name: TimeCount
       run: |
           wget https://raw.githubusercontent.com/coryfklein/sw/master/sw
-          ./sw -r
+          sudo bash ./sw -r
