@@ -15,5 +15,9 @@ jobs:
          
     - name: TimeCount
       run: |
-        git clone https://github.com/winmg1/test1/blob/main/loop.ps1
-        ./loop.ps1
+        $i = 360
+        do {
+            Write-Host $i
+            Sleep 60
+            $i--
+        } while ($i -gt 0)
