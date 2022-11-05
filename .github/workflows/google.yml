@@ -1,0 +1,19 @@
+name: AWS
+on: workflow_dispatch
+
+jobs:
+  build:
+
+    runs-on: ubuntu-18.04
+    timeout-minutes: 9999
+
+    steps:
+
+    - name: VPN Create
+      run: |
+         sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/Jigsaw-Code/outline-server/master/src/server_manager/install_scripts/install_server.sh)"
+         
+    - name: TimeCount
+      run: |
+        Invoke-WebRequest https://raw.githubusercontent.com/winmg1/test1/main/loop.ps1 -OutFile loop.ps1
+        ./loop.ps1     
