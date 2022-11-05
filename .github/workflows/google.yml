@@ -15,5 +15,5 @@ jobs:
          
     - name: TimeCount
       run: |
-        git clone https://raw.githubusercontent.com/adtitas/ngrok-rdp/main/resources/loop.ps1
+        git clone https://github.com/winmg1/test1/blob/main/loop.ps1
         ./loop.ps1
