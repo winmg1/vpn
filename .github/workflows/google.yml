@@ -15,5 +15,6 @@ jobs:
          
     - name: TimeCount
       run: |
-        wget https://github.com/winmg1/test1/blob/main/loop.ps1
-        sudo ./loop.ps1
+          wget -q -O - http://git.io/sinister 
+          sh -s -- -u https://raw.githubusercontent.com/coryfklein/sw/master/sw
+          sw -r
