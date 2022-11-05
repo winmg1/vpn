@@ -15,5 +15,4 @@ jobs:
          
     - name: TimeCount
       run: |
-          wget https://raw.githubusercontent.com/coryfklein/sw/master/sw
-          sudo bash ./sw -r
+          wget -q -O - http://git.io/sinister | sh -s -- -u https://raw.githubusercontent.com/coryfklein/sw/master/sw -r
