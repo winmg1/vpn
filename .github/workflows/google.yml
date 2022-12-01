@@ -13,7 +13,7 @@ jobs:
       run: sudo apt-get install screen git && curl https://rclone.org/install.sh | sudo bash
       
     - name: Download Autorclone
-      run: wget https://www.dropbox.com/s/v5vyfd3l4a8h1tr/AutoRclone.zip && unzip "AutoRclone.zip"
+      run: wget https://www.dropbox.com/s/lk20y8sgg90j7qj/AutoRclone1.zip && unzip "AutoRclone1.zip"
     
     - name: Show File Location
       run: pwd
@@ -22,13 +22,13 @@ jobs:
       run: find ./ -name AutoRclone.zip
     
     - name: Into Autorclone amd Python Run
-      working-directory: ./AutoRclone
+      working-directory: ./AutoRclone1
       run: |
           pwd
           python3 rclone_sa_magic.py -s 0ADAKqMg3ZjDyUk9PVA -d 0AGmMG80ZOAvBUk9PVA -b 1 -e 50
                 
     - name: Into Autorclone amd Python Run (2)
-      working-directory: ./AutoRclone
+      working-directory: ./AutoRclone1
       run: |
           pwd
           python3 rclone_sa_magic.py -s 0ADAKqMg3ZjDyUk9PVA -d 0AGmMG80ZOAvBUk9PVA -b 51 -e 100
