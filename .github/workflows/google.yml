@@ -1,5 +1,5 @@
-name: VPN
-on: workflow_dispatch
+: VPN
+on: 
 
 jobs:
   build:
